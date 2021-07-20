@@ -1,24 +1,34 @@
+/* eslint-disable jsx-a11y/alt-text */
+import {Card} from "./components/Card"
+import {Header} from "./components/Header";
+import {Drawer} from "./components/Drawer";
+
+let cardInfo = {}
 
 function App() {
-  return (
-    <div className="wrapper">
-        <header>
-            <div>
-            <svg />
-            <div>
-              <h3>React Sneakers</h3>
-              <p>Магазин лучших кроссовок</p>
+    return (
+        <div className="wrapper clear">
+            <Drawer/>
+            <Header/>
+            <div className="content p-40">
+                <div className="d-flex text-center justify-between mb-40">
+                    <h1>Все кроссовки</h1>
+                    <div className="search-block d-flex">
+                        <img src="/img/search.svg" alt="Search"/>
+                        <input type="text" placeholder="Поиск..."/>
+                    </div>
+                </div>
+
+                <div className="d-flex">
+                    <Card/>
+                    <Card/>
+                    <Card/>
+                    <Card/>
+                </div>
             </div>
-              <div>
-              <ul>
-                <li><svg/><span>6400 UAN</span></li>
-                <li><svg/></li>
-              </ul>
-              </div>
-            </div>
-        </header>
-    </div>
-  );
+
+        </div>
+    );
 }
 
 export default App;
