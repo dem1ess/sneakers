@@ -1,9 +1,8 @@
-/* eslint-disable jsx-a11y/alt-text */
 import {Card} from "./components/Card"
 import {Header} from "./components/Header";
 import {Drawer} from "./components/Drawer";
 
-let cardInfo = {}
+
 
 function App() {
     return (
